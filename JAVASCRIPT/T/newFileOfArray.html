@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="1">
+    <input type="button" value="2">
+    <input type="button" value="3">
+    <input type="button" value="4">
+    <input type="button" value="5">
+    <input type="button" value="6">
+</body>
+
+<script>
+
+
+
+    let a=[]
+          const input = document.querySelectorAll("input");
+
+          input.forEach((e , i)=>{
+            e.addEventListener("click" , ()=>{
+
+                if(a.includes(e.value)){
+
+                    e.style = "background-color:'' "
+                    a = a.filter(el=> el != e.value)
+
+                    
+                    // console.log(a)
+                }
+                else{
+                    a.push(e.value)
+
+                    e.style = "background-color: green "
+                    console.log(a)
+                }
+            })
+          })
+
+</script>
+</html>

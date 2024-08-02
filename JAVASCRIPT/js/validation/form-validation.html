@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" name="form" onsubmit="return validation()">
+      Name:  <input type="text" name="name" id=""> <span id="img"></span>
+      Password : <input type="password" name="password" id="">
+      confirm_Password : <input type="password" name="cpassword" id="">
+      <!-- <input type="submit"> -->
+      number <input type="" name="number" id=""><span id="numloc"></span><br/>  
+      <button type="submit">register</button>
+    </form>
+
+</body>
+
+
+
+<script>
+
+function validation(){
+    let name = document.form.name.value;
+    let password = document.form.password.value;
+    let cpassword = document.form.cpassword.value;
+    let num = document.form.number.value;
+    if(name == null || name == ""){
+        alert("name is required");
+        document.getElementById("img").innerHTML = "<img src='unchecked.gif'/> Please enter your name";
+         return false;
+    }
+    if(password.length < 6 ){
+        alert("Password must be at least 6 characters long.");
+         return false;
+    }
+    else if(password != cpassword){
+        alert("password must be same");
+        return false;
+    }
+    else if (isNaN(num)){  
+        alert("Enter Numeric value only")
+  document.getElementById("numloc").innerHTML="Enter Numeric value only";  
+  return false;  
+    }
+// }else{  
+//   return true;  
+//   }  
+} 
+
+</script>
+</html>
+

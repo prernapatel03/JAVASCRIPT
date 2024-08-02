@@ -1,0 +1,27 @@
+<html>
+  <head> </head>
+  <body>
+    <!-- <h1> Example of using sleep() in JavaScript </h1> -->
+    <script>
+      main();
+      async  function sleep(ms) {
+        const P = new Promise((res) => {
+            setTimeout(()=>{
+                res("hello")
+            } , ms)
+        }).then((res) => console.log(res));
+        //    P.then((e)=>e)
+
+        return await P
+      }
+
+      async function main() {
+  
+        await  sleep(5000);
+
+        console.log("hi")
+        // await n();
+      }
+    </script>
+  </body>
+</html>

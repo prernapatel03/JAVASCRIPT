@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="female" class="label">female</label><input type="radio" value="female" name="gender" id="female">
+    <label for="male"class="label">male</label><input type="radio" name="gender" id="male" value="male">
+    <button type="button" onclick="clickEvent()">click</button>
+</body>
+<script>
+
+    function clickEvent(){
+        const input = document.getElementsByClassName('label')
+       input.map((e)=> console.log(e))
+        // console.log(input)
+    }
+    // try {
+    //     const x = y/2
+    //     document.write(x);
+    // } catch (error) {
+    //      document.write(error)
+    // }
+</script>
+</html>

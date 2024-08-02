@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <a href="history.html">go to</a>
+    <input type="button" value="forward" onclick="goForward()"> -->
+
+    <button value="back" onclick="goBack()">back</button>
+
+    <button onclick="window.location.href='history.html'">go</button>
+
+    <button value="forward" onclick="goForward()">forward</button>
+
+    <input type="button" value="click" onclick="confirmFunction()" />
+
+    <button onclick="closeFunction()">close</button>
+  </body>
+  <script>
+    function go() {
+      history.go();
+    }
+    function goBack() {
+      history.back();
+    }
+    function goForward() {
+      history.forward();
+    }
+    let myWindow;
+    function confirmFunction() {
+      var t = prompt("Who are you?");
+
+      if (t == "") {
+        setTimeout(function () {
+          alert("please enter your name");
+        }, 500);
+      } else {
+        var v = confirm("Are you ok ? ");
+
+        if (v == true) {
+          alert("ok");
+        } else {
+          alert("why?");
+          myWindow = window.open(
+            "https://www.w3schools.com/js/js_window_history.asp",
+            " ",
+            "width=200,height=100"
+          );
+        }
+      }
+    }
+
+    function closeFunction() {
+      myWindow.close();
+    }
+  </script>
+</html>

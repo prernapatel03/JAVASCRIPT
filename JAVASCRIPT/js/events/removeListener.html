@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            /* border: 1px solid black; */
+            width: 50%;
+            height: 50%;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div id="div" >fhf</div>
+    <button id="mousemove" onclick="removedata()">remove</button>
+    <span id="span"></span>
+</body>
+
+<script>
+    function mousemove(e){
+        
+        const x = e.clientX;
+        const y = e.clientY;
+        const z = x + " " + y
+
+document.getElementById('span').innerHTML = z
+        
+        }
+        document.getElementById('div').addEventListener('mousemove' , mousemove)
+
+function removedata(){
+
+    document.getElementById('div').removeEventListener("mousemove", mousemove)
+}
+
+
+</script>
+</html>

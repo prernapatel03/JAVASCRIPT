@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let obj = {
+    'Students': [{
+        "name": "Raj",
+        "Age": "15",
+        "RollNumber": "123",
+        "Marks": "99",
+ 
+    }, {
+        "name": "Aman",
+        "Age": "14",
+        "RollNumber": "223",
+        "Marks": "69",
+    },
+    {
+        "name": "Vivek",
+        "Age": "13",
+        
+        "RollNumber": "253",
+        "Marks": "89",
+    },
+    ]
+};
+
+// document.write(obj.Students.map((e)=>e.name).toString())
+
+
+const a = [[2,3,4,5],[2,3,4]] 
+
+console.log(a.flat().map((e)=>e*2))
+
+const Y  = a.flatMap((e) => e.map((e)=>e*2))
+console.log(Y)
+
+var new_obj = {
+ webSiteName: 'StackOverFlow',
+ find: 'anything',
+ onDays: ['sun'     // Object "obj" contains array "onDays"
+            ,'mon',
+            'tue',
+            'wed',
+            'thu',
+            'fri',
+            'sat',
+             {name : "jack", age : 34},
+              // array "onDays"contains array object "manyNames"
+             {manyNames : ["Narayan", "Payal", "Suraj"]}, //
+           ]
+};
+const new_data = new_obj.onDays.map((e)=> e)
+document.writeln(new_data.map((e)=>e.name))
+
+document.writeln(new_data.map((e)=>e.manyNames))
+
+</script>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: silver;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 90vh;
+      }
+
+      form {
+        background-color: rgb(96, 96, 95);
+      }
+      form div {
+        padding: 30px 40px 0 0;
+        text-align: center;
+        width: 100%;
+      }
+      form .answer-input input {
+        padding: 10px 20px;
+      }
+      form .container input:last-child {
+        background-color: rgb(247, 98, 98);
+        border: 0;
+        color: aliceblue;
+      }
+      form .container input {
+        padding: 10px 0;
+        margin: 10px 0;
+        width: 20%;
+        height: 10%;
+        border: none;
+        border-radius: 4px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <form onclick="defineFun()">
+      <div class="answer-input">
+        <input type="
+        "  id="answer" />
+      </div>
+      <div class="container" onclick="fun(event)">
+        <input type="button" value="1" />
+
+        <input type="button" value="2" />
+        <input type="button" value="3" />
+
+        <input type="button" value="+" /><br />
+        <input type="button" value="4" />
+        <input type="button" value="5" />
+        <input type="button" value="6" />
+        <input type="button" value="-" /><br />
+        <input type="button" value="7" />
+        <input type="button" value="8" />
+        <input type="button" value="9" />
+        <input type="button" value="/" /><br />
+        <input type="button" value="*" />
+        <input type="button" value="0" />
+
+        <input type="button" value="=" />
+        <input type="button" value="s" />
+        <br />
+        <input type="button" value="AC" />
+      </div>
+    </form>
+  </body>
+
+  <script>
+
+    // function mainFun(){
+    //     document.getElementById("answer").value = " "
+    // }
+    // const arr = ["1","2","3","+","4","5","6","7","8","9","/","*","0","=","AC"]
+
+    let answer;
+    // function equalFun() {
+    //   if (event.target.value == "") {
+    //     answer.value = "";
+    //   }
+    // }
+
+    function fun(event) {
+      let data = event.target.value;
+      answer = document.getElementById("answer");
+
+      if (event.target.value === "=") {
+        if (answer.value == "") {
+          return (answer.value = "");
+        }
+        return (answer.value = eval(answer.value));
+      } 
+   
+        else if (event.target.value === "s") {
+      
+         const d = answer.value;
+         answer.value = d.substring(0 , d.length-1)
+      } 
+      else if (event.target.value === "AC") {
+        answer.value = "";
+      } 
+      else {
+        answer.value += data;
+      }
+    }
+
+    
+    function defineFun(){
+        
+    }
+    //     const arr = ["1","2","3","4","5","6","7" , "c"]
+
+    //    arr.splice(0 , 1)
+    //    console.log(arr)
+  </script>
+</html>

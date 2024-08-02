@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            counter-reset:section;
+        }
+        h1{
+            counter-reset:sub-section;
+        }
+        h1::after {
+            counter-increment: section;
+            content: counter(section);
+        }
+        h2::after{
+            counter-increment: sub-section;
+            content: counter(section) "." counter(sub-section);
+
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+
+            <h1>section</h1>
+            <ul>
+                <li>
+
+                    <h2>HTML</h2>
+                </li>
+                <li>
+
+                    <h2>Css</h2>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+
+    <h1>section</h1>
+    <h2>Js</h2>
+    <h2>React</h2>
+
+        
+
+</body>
+</html>

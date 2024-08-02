@@ -1,0 +1,94 @@
+<!-- // 1) name : keyup
+// 2)email : change 
+// number - keydown
+// button- onclick  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        table, td{
+            border: 1px solid black;
+        }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      name : <input type="text" id="textInput" onkeyup="keyUpEvent()" /> <br />
+      email :
+      <input type="email" name="" id="emailINput" onchange="changeEvent()" />
+      <br />
+      number :
+      <input type="number" id="numberInput" onkeydown="keyDownEvent()" /><br />
+
+      <button type="button" onclick="Data()">save</button>
+    </form>
+
+    <div id="showData"></div>
+
+    <table id="myTable">
+      <tr>
+        <td>name</td>
+        <td>email</td>
+        <td>number</td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+    </table>
+    <script>
+      let textInput = document.getElementById("textInput");
+
+      let emailINput = document.getElementById("emailINput");
+      let numberInput = document.getElementById("numberInput");
+
+      //   let showData = document.getElementById('showData');
+
+      
+      var tr = document.createElement("TR");
+      tr.setAttribute("id", "myTr");
+      document.getElementById("myTable").appendChild(tr);
+
+   
+      
+      function keyUpEvent() {
+        console.log("name :", textInput.value);
+      }
+      function changeEvent() {
+        console.log("email :", emailINput.value);
+      }
+      function keyDownEvent() {
+        console.log("number :", numberInput.value);
+      }
+
+      function Data() {
+          console.log("name :", textInput.value);
+          console.log("email :", emailINput.value);
+          console.log("number :", numberInput.value);
+          var td = document.createElement("TD");
+      
+      var td1 = document.createElement("TD");
+      
+      var td2 = document.createElement("TD");
+          var name_show = document.createTextNode(`  ${textInput.value} ` );
+    
+          var email_show = document.createTextNode(`  ${emailINput.value} `);
+    
+          var number_show = document.createTextNode(`  ${numberInput.value} `);
+    
+
+        // showData.innerHTML =` name  :  ${textInput.value}   email :  ${emailINput.value}  number : ${numberInput.value}`
+        td.appendChild(name_show);
+        td1.appendChild(email_show);
+        td2.appendChild(number_show);
+        document.getElementById("myTr").appendChild(td);
+        document.getElementById("myTr").appendChild(td1);
+        document.getElementById("myTr").appendChild(td2);
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="demo.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>objects</title>
+  </head>
+  <style>
+    /* div{
+      font
+    } */
+  </style>
+  <body onunload="myFunction()"></body>
+
+  <script>
+    var obj = {};
+
+    obj.name = "prerna";
+    // document.write(obj.hasOwnProperty('name'));
+
+    var newObj = Object.create(obj);
+    newObj["add"] = "hy";
+
+    // document.write(newObj.hasOwnProperty('add'));
+    // document.write(newObj.hasOwnProperty('name'));
+
+    // function fun(){
+    //     this.name="cgewcvew"
+    //     age:20
+    // }
+
+    // const x = new Fun();
+    // x._proto_.add = "ahm";
+    // document.write(x.hasOwnProperty('age'))
+
+    // document.write(x.hasOwnProperty('add'))
+
+    let animal = { eats: true };
+
+    let cat = { eats: true };
+
+    // console.log(Object.setPrototypeOf(animal) , {});
+
+    let rabbit = Object.create(animal);
+
+    const x = Object.getPrototypeOf(rabbit) === animal;
+    // document.write(x);
+
+    const y = Object.setPrototypeOf(rabbit, {});
+    //    document.write(y)
+
+    let o = {
+      value: "prerna",
+      get number() {
+        return this.value;
+      },
+    };
+
+    Object.defineProperty(o, "name", {
+      get() {
+        return name;
+      },
+      set(valname) {
+        return (name = valname);
+      },
+      enumerable: true,
+      configurable: true,
+    });
+
+    o.name = "prerna";
+
+    // document.write(name);
+
+    // let xObj = Object.getOwnPropertyDescriptors(o);
+
+    let xObj = Object.getOwnPropertyDescriptor(o, "name");
+
+    // console.log(xObj);
+
+    //  assign method
+
+    // const ob = {
+    //     c:3
+    // };
+
+    // const x = Object.assign({c:4 , d:6} , ob);
+
+    // console.log(x.c  , x.d);
+
+    //  create method
+
+    // const ob = {
+    //     name : "hecvwhcbehjwfb"
+    // }
+
+    // const x = Object.create(ob);
+
+    // x.name = "prerna"
+    // console.log(x.name);
+
+    // defineProperty
+
+    // const ob = {};
+
+    // const  y = Object.defineProperty(ob , 'name' , {
+    //     // value : "prerna",
+
+    //     get(){
+    //         return lname;
+    //     },
+    //     set(val){
+    //         return lname = val
+    //     }
+    // })
+
+    // ob.lname = "roshni"
+    // console.log(ob.lname)
+    // console.log(y.name)
+
+    // defineProperties
+
+    // const ob ={
+    // }
+    // const y  = Object.defineProperties(ob , {
+    //     name : {
+    //         value:"prerna"
+    //     },
+    //     age : {
+    //         value :21
+    //     }
+    // })
+
+    // console.log(y.age)
+
+    // const ob = {}
+
+    // const y = Object.defineProperties(ob , {
+    //     lname : {
+    //         x : "hcvhejcvhjechehcb",
+    //                 y : "jhefgjwehfvyhevf",
+    //         get(){
+    //             return lname;
+    //         },
+    //         set(val){
+    //             return lnmae = val
+    //         }
+    //     }
+    // })
+    // ob.name = "prerna"
+    // console.log(ob.name)
+
+    //  entries
+
+    // const ob = {
+
+    //     5 : "c",
+    //     3  : "c",
+    //     2 : "c",
+    // };
+
+    // console.log(Object.entries(ob));
+
+    //  freeze
+
+    // const ob = {
+    //     name : "ehcvjebcjbc"
+    // }
+
+    // const x = Object.freeze(ob);
+
+    // x.name = "prena"
+    // console.log(x.name)
+
+    //  getOwnProtoDescriptor
+
+    // const ob ={
+    //     value : "prerna",
+    //     name: "",
+    //     get(){
+    //         return value;
+    //     },
+    //     set(newVal){
+    //         return value = newVal;
+    //     }
+    // }
+
+    // const x = Object.getOwnPropertyDescriptors(ob , "value");
+    // x.name= "patel"
+    // console.log(x.name)
+
+    //  getOwnPropertyNames
+    // console.log(Object.getOwnPropertyNames(ob))
+
+    // getProtoTypeof
+
+    // const ob = {
+    //     eats : true
+    // };
+
+    // const rabbit = Object.create(ob);
+
+    // console.log(Object.getPrototypeOf((rabbit) == ob))
+
+    //  hasOwnProperty
+
+    // const obj = {}
+
+    // obj.name = "gfhvhvh";
+
+    // console.log(Object.hasOwnProperty('name'))
+
+    // const ob1 = {
+    //     name : "JfdgfcS"
+    // }
+
+    // const ob2 = {
+    //     name : "JS"
+    // }
+
+    // console.log(Object.is(ob1.name , ob2.name));
+
+    // console.log(Object.is("ob", "ob"));
+
+    const arr = [1, 2, 3, 4, 5];
+
+    const T = arr.map((e) => (e += 5));
+
+    // console.log(T);
+
+    // const arr1 = [
+    //   1,undefined,"", 1, 2, 1, 1, 3, null,4,5,5,2,5,,,,5,
+    // ];
+
+    // const z = arr1.filter((e, i, arr1) =>
+
+    //   if (e == undefined) {
+    //     return;
+    //   }
+    //   else if (arr1.indexOf(e) !== i) {
+    //     return;
+    //   }
+    //   else {
+    //     return e;
+    //   }
+
+    // );
+
+    // console.log(z);
+
+    // let newArr = [];
+
+    // let newArr = new Set(arr1);
+
+    //  newArr = arr1.filter(Boolean && new Set(arr1));
+    // console.log(newArr);
+
+    var str = "vcheb  vvewhvcwtefvhe      ehygfeyjhbf";
+    document.write(str.trim());
+
+    // console.log(str.substring(2,5))
+
+    // console.log(   Math.min(2,5))
+
+    function myFunction() {
+      alert("Thank you for visiting W3Schools!");
+      console.log("Thank you for visiting W3Schools!");
+      document.write("Thank you for visiting W3Schools!");
+    }
+  </script>
+</html>

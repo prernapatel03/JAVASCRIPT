@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <style>
+   
+    </style>
+  </head>
+  <!-- <body> -->
+    <body onload="alert('alert for onload')"  onresize="onResize()">
+
+    <button class="dbClick" ondblclick="onDbClick()">DbClick - Event</button>
+    
+    <br /><br />
+    <button class="onclick-div" onclick="onClick()">Onclick event</button>
+
+    <br />
+    <br />
+    <button
+      class="onMouseOver-Out"
+      onmouseover="onMouseOver()"
+      onmouseout="onMouseOut()"
+    >
+      mouse over and mouse out
+    </button>
+    <br />
+    <br />
+    <button
+      class="onMouseDown-Up"
+      onmousedown="onMouseDown()"
+      onmouseup="onMouseUp()"
+    >
+      mouse down and mouse up
+    </button>
+    <br />
+    <br />
+    <button type="" id="onMouseMove" onmousemove="onMouseMove(event)">
+      click and show mouse move event
+    </button>
+    <span id="for-mouseOver"> </span> <br /><br />
+    <input
+      id="keyDown-Up"
+      onkeydown="onKeyDown()"
+      onkeyup="onKeyUp()"
+      placeholder="keyUp-Down"
+    />
+
+    <br /><br />
+    <input
+      type="text"
+      id="focus-event"
+      placeholder="focus-event"
+      onfocus="onFocus()"
+      onblur="onBlur()"
+    />
+    <br /><br />
+
+    <select name="" id="onchange-select" onchange="onChange()">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+
+    <span id="on-change"></span>
+
+    <div>
+      <span id="on-resize"> create small width and height</span>
+    </div>
+  </body>
+  <script>
+    function onDbClick() {
+      alert("this is onDbclick event");
+    }
+    function onClick() {
+      alert("this is onclick event");
+    }
+    function onMouseOver() {
+      document.querySelector(".onMouseOver-Out").style.backgroundColor =
+        "lightblue";
+    }
+
+    function onMouseOut() {
+      document.querySelector(".onMouseOver-Out").style.backgroundColor =
+        "transparent";
+    }
+
+    function onMouseDown() {
+      document.querySelector(".onMouseDown-Up").style.backgroundColor =
+        "lightblue";
+    }
+
+    function onMouseUp() {
+      document.querySelector(".onMouseDown-Up").style.backgroundColor =
+        "transparent";
+    }
+
+    function onMouseMove(e) {
+      document.querySelector("#onMouseMove").style.backgroundColor =
+        "lightgreen";
+      let x = e.clientX;
+      let y = e.clientY;
+      let coor = "Coordinates: (" + x + "," + y + ")";
+      let mouseOver = (document.getElementById("for-mouseOver").innerHTML =
+        coor);
+    }
+    function onKeyDown() {
+      document.getElementById("keyDown-Up").style.color = "green";
+    }
+
+    function onKeyUp() {
+      document.getElementById("keyDown-Up").style.color = "red";
+    }
+
+    function onFocus() {
+      document.getElementById("focus-event").style.backgroundColor = "green";
+    }
+
+    function onBlur() {
+      document.getElementById("focus-event").style.backgroundColor =
+        "transparent";
+    }
+    function onChange() {
+      document.getElementById("onchange-select").style.color = "red";
+      let on_Change = document.getElementById("onchange-select").value;
+      document.getElementById("on-change").innerHTML = on_Change;
+    }
+    function onResize() {
+      let w = window.outerWidth;
+      let h = window.outerHeight;
+      let txt = "Window size: width=" + w + ", height=" + h;
+      document.getElementById("on-resize").innerHTML = txt;
+    }
+  </script>
+</html>

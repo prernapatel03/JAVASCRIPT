@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    name: <input type="text" name="" id="name" value=""> <br>
+    email :<input type="text" name="" id="email" value=""><br>
+    number<input type="text" name="" id="number" value=""><br>
+
+    <input type="button" value="get" onclick="getCookies()">
+    <input type="button" value="set" onclick="setCookies()">
+</body>
+
+<script>
+
+function setCookies(){
+    const name = document.getElementById('name').value + ";" + "max-age="+0 + ";";
+    const email = document.getElementById('name').value + ";" + "max-age="+0 + ";";
+    const number = document.getElementById('number').value + ";" + "max-age="+0 + ";";
+
+    var info ="name =" + name + ";" + "max-age="+0 + ";" + ";email =" + email+ ";" + "max-age="+0 + ";" +  ";number=" + number + ";" + "max-age="+0 + ";"+";"
+    document.cookie = info
+}
+function getCookies(){
+    if(document.cookie.length!=0){
+        console.log(document.cookie)
+        alert(document.cookie)
+    }
+    else{
+        alert("empty")
+    }
+
+}
+</script>
+</html>

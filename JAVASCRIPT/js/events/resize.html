@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    
+    function fun(){
+        
+        var res = window.outerHeight + " " + window.outerWidth
+
+        document.getElementById('s1').innerHTML = res
+    }
+</script>
+</head>
+<body onresize = "fun()">
+<h3> This is an example of using onresize attribute. </h3>
+<p> Try to resize the browser's window to see the effect. </p>
+
+<p id = "para"> </p>
+<p> You have resized the window <span id = "s1"> 0 </span> times.</p>
+</body>
+</html>
+
+ 
+
+

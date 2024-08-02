@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <!-- <input id="input" onchange="change()"> -->
+</body>
+<script>
+
+const inputElement = document.querySelector('input');
+inputElement.addEventListener("keypress" , function() {
+    // Your custom logic here
+    console.log(inputElement.value)
+});
+    // function change(){
+    //     const x = document.getElementById("input")
+
+    //     console.log(x.value);
+    // }
+// document.getElementById("input").addEventListener("change" , function(){
+//     console.log(x)
+//    })
+
+
+</script>
+</html>

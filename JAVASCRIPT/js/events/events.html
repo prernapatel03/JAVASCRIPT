@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mousemove{
+            border:1px solid black;
+            height: 50px;
+            width: 50%;
+            background-color: aqua;
+        }
+    </style>
+    
+</head>
+<body onload="alert('load successfully')">
+
+<!-- <div class="mousemove" onmousemove="onMouseMove()" id="mousemove"> -->
+
+</div>
+    
+<input class="class-onMouseOver" 
+
+onmouseover="onMouseOver()"
+onmouseout="onMouseOut()" 
+
+onfocus="onFocus()"
+onkeydown="onkeydown()"
+>
+<br><br>
+
+<!-- <input type="text" id="input1" onkeydown="onkeydown(e)"/> -->
+
+<br>
+<br>
+<input type="text" class="events" placeholder="for-mousedown and mouseout"
+onmousedown="onMouseDown()" onmouseup="onMouseup()">
+</body>
+
+<script>
+    function onClik(){
+       const onClick =  document.getElementsByClassName("class-onMouseOver").innerHTML = "This is onClick event";
+       alert(onClick);
+    }
+    
+    function onMouseOver(){
+        document.querySelector(".class-onMouseOver").style.backgroundColor = "green";
+    }
+
+    function onMouseOut(){
+        document.querySelector(".class-onMouseOver").style.backgroundColor = "red";
+    }
+ 
+    function onFocus(){
+        document.querySelector(".class-onMouseOver").style.backgroundColor = "yellow";
+
+    }
+    function onMouseDown(){
+        document.querySelector(".events").style.backgroundColor = "pink";
+    }
+    function onMouseup(){
+        document.querySelector(".events").style.backgroundColor = "black";
+    }
+    // function onkeydown(){
+    //     document.getElementById("input1");
+	// 	alert("Pressed a key");
+    // }
+ 
+
+// function onMouseMove(e){
+//   console.log(e)
+// }
+</script>
+</html>

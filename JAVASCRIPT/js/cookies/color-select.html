@@ -1,0 +1,58 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+</head>  
+<body>  
+    <!-- <button type="button" onclick="setdata()">remove</button> -->
+        <select id="color" onchange="display()">  
+                <option value="Select Color">Select Color</option>  
+                <option value="yellow">Yellow</option>  
+                <option value="green">Green</option>  
+                <option value="red">Red</option>  
+            </select>  
+            <script type="text/javascript">   
+
+            
+// function setdata(){
+    
+    // }
+    function display()  
+    {  
+                        var value = document.getElementById("color").value;  
+                    if (value != "Select Color")  
+                    {  
+                        document.bgColor = value;  
+                        var obj = JSON.stringify(document.bgColor)
+                        document.cookie = obj;
+                        // document.cookie = "color=" + value + ";max-age=" + 0 +";" 
+                        // document.cookie =  "color=" + value +  ";max-age="+ 0 + ";";  
+                    }  
+                }  
+                document.onload = function ()  
+                {  
+                    if (document.cookie.length != 0)  
+                    {  
+                        var array = document.cookie.split("=");  
+                      document.getElementById("color").value = array[1];  
+                      document.bgColor = array[1];
+                    
+                        // document.cookie = "color=" + T + "; max-age =" + 0 + ";"
+
+                        var obj = JSON.parse(document.cookie)
+                       document.cookie =  "color=" + obj.bgColor + ";max-age=" + 0 +";"
+
+                        console.log(  document.cookie)
+                        // console.log(document.cookie)
+                        // document.write(document.cookie)
+                    }  
+                    else{
+                        alert("empty")
+                    }
+                }  
+              
+                //   function data(){
+                //   document.cookie =  `"color"= ${value}; max-age"=`+(0*0*0*0)+";"
+                //   }
+            </script>  
+</body>  
+</html>  

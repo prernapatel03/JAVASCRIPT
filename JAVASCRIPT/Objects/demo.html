@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let value = {
+    "People": [
+        {
+            // 
+            "id": "12",
+            "parentId": "0",
+            "text": "Man",
+            "level": "1",
+            "children": [
+                {
+                    "id": "6",
+                    "parentId": "12",
+                    "text": "Boy",
+                    "level": "2",
+                    "children": null
+                },
+                {
+                    "id": "7",
+                    "parentId": "12",
+                    "text": "Other",
+                    "level": "2",
+                    "children": null
+                }
+            ]
+        },
+        {   
+            // 
+            "id": "9",
+            "parentId": "0",
+            "text": "Woman",
+            "level": "1",
+            "children":
+          [  {
+                "id": "11",
+                "parentId": "9",
+                "text": "Girl",
+                "level": "2",
+                "children": null
+            }]
+        }
+    ],
+    "Animals": [
+        {
+            "id": "5",
+            "parentId": "0",
+            "text": "Dog",
+            "level": "1",
+            "children":
+                {
+                    "id": "8",
+                    "parentId": "5",
+                    "text": "Puppy",
+                    "level": "2",
+                    "children": null
+                }
+        },
+        {
+            "id": "10",
+            "parentId": "13",
+            "text": "Cat",
+            "level": "1",
+            "children":
+            {
+                "id": "14",
+                "parentId": "13",
+                "text": "Kitten",
+                "level": "2",
+                "children": null
+            }
+        }
+    ]
+}
+
+
+
+
+const val = value.People.map(e=>e.id);
+
+// console.log(val)
+
+const v1 = value.People.filter(e=>{
+
+
+
+        return e.id
+    
+}
+
+)
+console.log(v1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const child1 = value.People
+// const child1_id = child1.map(e=>e.id)
+// // console.log(child1_id)
+
+
+// const  children = value.People.map(e=>e.children.map(e=>e.id))
+// const data = child1_id.concat(children).flat()
+// // console.log(child1_id.concat(children))
+
+
+
+
+
+// const Animal1 = value.Animals
+// const Animal1_id = Animal1.map(e=>e.id)
+
+
+// const  Animal1_child = value.Animals.map(e=>e.children.id)
+
+// const newData = Animal1_id.concat(Animal1_child)
+// console.log(data.concat(newData))
+</script>
+</html>

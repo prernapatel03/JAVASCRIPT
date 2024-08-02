@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+// const ob = {
+//     name : "prerna",
+//     c:6
+// }
+
+// const x = Object.assign({c:4, d:6} , ob)
+
+// console.log(x.c)
+// console.log(x.c)
+
+
+// const x = Object.create(ob)
+
+// const x = Object.freeze(ob)
+
+
+// x.name = "patel"
+
+// console.log(x.name)
+
+
+
+// const ob = {
+//     p:1,
+//     q:2,
+//     r:3
+// }
+
+
+// console.log(
+//     Object.entries(ob)[2]
+// )
+
+
+// const ob = {}
+
+// Object.defineProperty(ob , 'property' , {
+//     value : "prerna",
+// })
+
+
+// Object.defineProperties(ob , {
+//     property : {
+//        value:"prerna patel"
+//     }
+// })
+// console.log(ob.property)
+
+
+
+// const ob = {
+//     property : "42"
+
+// }
+
+// const d = Object.getOwnPropertyDescriptor(ob , property)
+
+// console.log(d.value)
+
+const arr = [
+    {id:1, name:'test1'},
+    {id:2, name:'test1'},
+    {id:3, name:'test1'},
+    {id:4, name:'test1'},
+    {id:5, name:'test1'},
+    {id:6, name:'test1'},
+    {id:7, name:'test1'},
+    {id:8, name:'test1'},
+    {id:9, name:'test1'},
+    {id:10, name:'test1'},
+    {id:11, name:'test1'},
+    {id:12, name:'test1'},
+]
+
+// arr.map((e)=>{
+//     // console.log(e)
+// })
+arr.findIndex((e)=>
+        e.id = 10
+   
+)
+  
+// )
+
+// console.log(arr.findIndex((e)=> e.id == 10))
+// console.log(arr.filter((e)=> e.id ==10 ))
+
+// const a = [1,2,3,8,8]
+
+// function Reduce(x , y){
+//      return x + y;
+// }
+
+// console.log(a.reduce(Reduce , 1))
+
+
+
+
+
+// const obj = {};
+
+// Object.defineProperties(obj, {
+//   prop1: {
+//     get: function() { return this._prop1; },
+    
+//     set: function(val) { this._prop1 = val; },
+//     enumerable: true,
+//     configurable: true
+//   },
+
+// });
+
+// obj.prop1 = "Hello";
+// console.log(obj.prop1); 
+
+// obj.prop2 = "World";
+// console.log(obj.prop2);
+
+
+
+
+function sample(){
+    this.age = 20;
+    this.name = "vevje";
+console.log(this)
+ 
+    // address : "cbvgcqh"
+    
+}
+
+const FunObj = new sample();
+
+FunObj.address = "ahm"
+
+FunObj.age = 4 
+
+
+console.log(FunObj.hasOwnProperty('age') , FunObj.age)
+    </script>
+</body>
+</html>

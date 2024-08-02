@@ -1,0 +1,30 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+</head>  
+<body>  
+
+    <input type="button" onclick="setCookie()" value="setCookie">
+    <input type="button" onclick="getCookie()" value="getCookie">
+
+    <script>
+        function setCookie(){
+
+            document.cookie = "name1 = prerna patel;max-age=9;"
+            // document.cookie = "name = xyz patel;max-age= " +  0 + ";"
+        }
+        function getCookie(){
+
+            if(document.cookie.length!=0){
+                console.log(document.cookie);
+                alert(document.cookie)
+            }
+            else{
+                console.log("empty")
+                alert("empty")
+            }
+        }
+    </script>
+  
+</body>  
+</html>  

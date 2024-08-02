@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" type="button" onclick="Click()">click</button>
+<ul id="list">
+    <li>HOME</li>
+    <li>ABOUT</li>
+    <li>CONTACT</li>
+</ul>
+    
+</body>
+
+</html>
+<script>
+    const txt = `{
+        "name" : "prerna",
+        "age" : "20"
+    }`
+          let list = document.getElementById("list")
+          list.style.display = "none";  
+        // document.getElementById("btn").disabled = false;  
+    
+         function Click(){
+          if(list.style.display=="block"){
+            list.style.display="none"
+          }
+          else{
+            list.style.display="block"
+          }
+         }
+
+         const txt1 = JSON.parse(txt)
+         console.log(txt1)
+
+    </script>

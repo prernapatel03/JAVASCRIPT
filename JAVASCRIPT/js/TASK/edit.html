@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Element Object</h1>
+<h2>The appendChild() Method</h2>
+
+<ul id="myList">
+  <!-- <li>Coffee</li>
+  <li>Tea</li> -->
+</ul>
+
+<p>Click "Append" to append an item to the end of the list:</p>
+
+<button onclick="myFunction()">Append</button>
+
+<input type="text" id="input">
+
+<button onclick="editable()">edit </button>
+
+<script>
+    let input = document.getElementById('input')
+    let node = document.createElement("li");
+    let y;
+    function myFunction() {
+    var textnode = document.createTextNode(input.value);
+
+// Create an "li" node:
+
+// Create a text node:
+
+
+// Append the text node to the "li" node:
+ y = node.appendChild(textnode);
+console.log(
+y
+)
+ 
+
+// Append the "li" node to the list:
+document.getElementById("myList").appendChild(node);
+}
+
+function editable(){
+  const x = prompt()
+//   console.log(y)
+
+y.append(x);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 50px 100px;
+      }
+      table,
+      tr,
+      td {
+        background-color: blanchedalmond;
+        border: 1px solid black;
+      }
+      td {
+        padding: 20px;
+      }
+      td:last-child {
+        width: 20%;
+      }
+      td:last-child button {
+        background-color: red;
+        border: none;
+        outline: none;
+        color: white;
+        border-radius: 5px;
+        font-size: 10px;
+        padding: 10px;
+      }
+      td:last-child button:last-child {
+        background-color: green;
+      }
+      table {
+        /* width: 90%; */
+        text-align: center;
+        align-items: center;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="number" id="input-fname" />
+
+    <input type="text" id="input-lname" />
+
+    <button onclick="AddData()">submit</button>
+
+    <div id="container"></div>
+  </body>
+  <script>
+    let d = JSON.parse(localStorage.getItem("list")) || [];
+  
+
+    let input_fname = document.getElementById("input-fname");
+    let input_lname = document.getElementById("input-lname");
+    AddData()
+    async function data() {
+      try {
+        const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+
+        d = await res.json();
+        // console.log(d);
+        localStorage.setItem("list", JSON.stringify(d));
+
+      
+  
+        let container = document.getElementById("container");
+        let new_data = `
+        <table>
+            <tr> 
+              <td>id</td>
+              <td>title</td>
+              <td>operations</td>
+            </tr>
+        `;
+        d.map((e, i) => {
+          new_data += `
+          <tr id="data">
+              <td>${e.id}</td>
+              <td>${e.title}</td>
+              <td>
+                <button onclick="deleteFun(${i});">Delete</button>
+                <button onclick="editFun(${i});">Edit</button>
+              </td>
+            </tr>
+          `;
+        });
+
+        new_data += `</table>`;
+        container.innerHTML = new_data;
+  
+     
+     
+        AddData()
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    data();
+
+    function AddData() {
+      let id = input_fname.value;
+      let title = input_lname.value;
+      let final_data = { id, title };
+      d.concat(final_data);
+      console.log(d)
+      // let new_data = `
+      //   <table>
+      //       <tr> 
+      //         <td>id</td>
+      //         <td>title</td>
+      //         <td>operations</td>
+      //       </tr>
+      //   `;
+      // d.map((e, i) => {
+      //   new_data += `
+      //     <tr id="data">
+      //         <td>${e.id}</td>
+      //         <td>${e.title}</td>
+      //         <td>
+      //           <button onclick="deleteFun(${i});">Delete</button>
+      //           <button onclick="editFun(${i});">Edit</button>
+      //         </td>
+      //       </tr>
+      //     `;
+      // });
+
+      // new_data += `</table>`;
+      // container.innerHTML = new_data;
+
+
+    }
+  </script>
+</html>

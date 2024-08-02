@@ -1,0 +1,13 @@
+document.createElement(element)	Create an HTML element
+document.removeChild(element)	Remove an HTML element
+document.appendChild(element)	Add an HTML element
+document.replaceChild(new, old)	Replace an HTML element
+document.write(text)
+
+
+parentNode
+childNodes[nodenumber]
+firstChild
+lastChild
+nextSibling
+previousSibling

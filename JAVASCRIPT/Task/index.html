@@ -1,0 +1,71 @@
+<!-- // 1) name : keyup
+// 2)email : change 
+// number - keydown
+// button- onclick  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      name : <input type="text" id="textInput" onkeyup="keyUpEvent()" /> <br />
+      email :
+      <input type="email" name="" id="emailINput" onchange="changeEvent()" />
+      <br />
+      number :
+      <input type="number" id="numberInput" onkeydown="keyDownEvent()" /><br />
+
+      <button type="button" onclick="Data()">save</button>
+    </form>
+
+    <div id="showData">
+      
+    </div>
+
+    <table>
+        <tr>
+            <!-- <td>name</td>
+            <td>email</td>
+            <td>number</td> -->
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <script>
+      let textInput = document.getElementById("textInput");
+
+      let emailINput = document.getElementById("emailINput");
+      let numberInput = document.getElementById("numberInput");
+
+
+      let showData = document.getElementById('showData');
+
+
+      function keyUpEvent() {
+        console.log("name :", textInput.value);
+      }
+      function changeEvent() {
+        console.log("email :", emailINput.value);
+      }
+      function keyDownEvent() {
+        console.log("number :", numberInput.value);
+      }
+
+      function Data() {
+        console.log("name :", textInput.value);
+        console.log("email :", emailINput.value);
+        console.log("number :", numberInput.value);
+
+        showData.innerHTML =` name  :  ${textInput.value}   email :  ${emailINput.value}  number : ${numberInput.value}`
+
+      }
+    </script>
+  </body>
+</html>

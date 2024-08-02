@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+class person {
+    constructor(roll_number , fname , lname){
+      this.roll_number = roll_number,
+      this.fname = fname,
+      this.lname = lname
+     
+    }
+
+    name = function(){
+          return this.roll_number +  " " +  this.fname  + " " + this.lname
+    }
+
+    
+
+
+}
+const b = {
+  makeSound() {
+      console.log("Animal sound!");
+  }
+};
+
+const Person1 =  new person(1 , "prerna" , "patel")
+
+const x = [Person1.fname , Person1.lname , Person1.roll_number]
+
+console.log(x);
+
+    const table = document.createElement("TABLE");
+table.setAttribute("id", "myTable");
+document.body.appendChild(table);
+
+
+
+var tr = document.createElement("TR");
+tr.setAttribute("id", "myTr");
+document.getElementById("myTable").appendChild(tr)
+
+var td = document.createElement("TD");
+var t = document.createTextNode(`${x[2]} ${x[0]} ${x[1]}`)
+
+var t1 = document.createTextNode(`${x[2]} ${x[0]} ${x[1]}`)
+
+td.appendChild(t);
+td.appendChild(t1);
+document.getElementById("myTr").appendChild(td);
+
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div onclick="myFun(event)">
+      <input type="button" value="1" />
+      <input type="button" value="2" />
+      <input type="button" value="3">
+      <input type="button" value="4">
+      <input type="button" value="5">
+      <input type="button" value="6">
+    </div>
+  </body>
+
+  <script>
+    var a = new Set([]);
+    
+    function myFun(event) {
+      
+      if (a.has(event.target.value)) {
+
+       a.delete(event.target.value);
+       event.target.style = "color : ''"
+      //  console.log(a)
+
+
+      } else {
+        a.add(event.target.value);
+        event.target.style = "color : green"
+        // console.log(a);
+      }
+
+     
+      console.log(Array.from(a));
+
+    }
+   
+    
+  </script>
+</html>
